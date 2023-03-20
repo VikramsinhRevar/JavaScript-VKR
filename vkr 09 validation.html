@@ -32,8 +32,10 @@
             </tr>
             <tr>
                 <td>Mobile</td>
-                <td><input type="text" id="mobile" onblur="Valid(this,'mError')">
-                <span id="mError"></span></td>
+                <td><input type="text" id="mobile" onblur="Valid(this,'mError')" onkeydown="MobileValid(this,'mobileError')">
+                <span id="mError"></span>
+                <span id="mobileError"></span>
+            </td>
             </tr>
             <tr>
                 <td colspan="2" align="center"><input type="submit" name="submit"></td>
@@ -97,6 +99,19 @@
         {
             document.getElementById(spnid).style.color="red"
             document.getElementById(spnid).innerHTML="Please Enter min 3 & max 5 characters";
+        }
+    }
+    function MobileValid(e,spnid)
+    {
+        var mobile = /^[0-9]{10}$/
+        if(mobile.test(e.value))
+        {
+            document.getElementById(spnid).innerHTML="";
+        }
+        else
+        {
+            document.getElementById(spnid).style.color="red"
+            document.getElementById(spnid).innerHTML="Please Enter Valid Mobile Number";
         }
     }
 </script>
