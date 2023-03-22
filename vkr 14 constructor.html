@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // constructor: A constructor is a special fucntion that creates and initializes an
+    // object instance of a class. In JavaScipt, a constructor gets called when an object
+    // is created using the new keyword
+    function MyFunc(name,age,profession)
+    {
+        this.name = name
+        this.age = age
+        this.profession = profession
+    }
+    data = new MyFunc("john",25,"Doctor")
+    console.log(data);
+    console.log(data.name);
+    console.log(data.profession);
+    console.log(data.age);
+
+    function Demo(name,age,profession)
+    {
+        this.name = "angella"
+        this.age = 26
+        this.profession ="teacher"
+    }
+    data2 = new Demo()
+    console.log(data2);
+</script>
